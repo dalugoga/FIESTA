@@ -32,6 +32,7 @@ TagManager:
   - StandardChart
   - DisplayScreen
   - Replay
+  - Floor
   layers:
   - Default
   - TransparentFX
