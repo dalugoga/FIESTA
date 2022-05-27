@@ -82,25 +82,25 @@ public class InteractionsController : MonoBehaviour {
     private void SetInteractionState(InteractionState state)
     {
         switch (state)
-        {
+        {//COMMENT SPINMENUS
             case InteractionState.None:
-                spinMenu.Show();
+                //spinMenu.Show();
                 rangedInteractions.Enable();
                 break;
 
             case InteractionState.Grabbing:
                 //closeInteractionsScript.DisableAndInterrupt();
-                spinMenu.Disable();
+                //spinMenu.Disable();
                 rangedInteractions.Disable();
                 break;
 
             case InteractionState.CloseInteracting:
-                spinMenu.Disable();
+                //spinMenu.Disable();
                 rangedInteractions.Disable();
                 break;
 
             case InteractionState.RangedInteracting:
-                spinMenu.Hide();
+                //spinMenu.Hide();
                 break;
 
             case InteractionState.RangedMenuOpen:

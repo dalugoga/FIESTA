@@ -74,13 +74,14 @@ public class DataReplayer : MonoBehaviour
     {
         UnityEngine.XR.XRSettings.enabled = false;
     }
-
+#if UNITY_EDITOR
     public void Start()
     {
         FindPlayerDataFiles();
         FindObjectDataFiles();
         FindAnnotationDataFiles();
     }
+
 
     private void FindPlayerDataFiles()
     {
@@ -148,7 +149,7 @@ public class DataReplayer : MonoBehaviour
             Debug.LogError("Cound not find log files. Make sure they are placed in the .../Assets/Logs/ folder with both Study A and B subfolders.");
         }
     }
-
+#endif
     public void StartReplay()
     {
         if (!isRunnning)

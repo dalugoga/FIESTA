@@ -80,7 +80,7 @@ SubShader {
 	Pass {
 		CGPROGRAM
 #include "UnityCG.cginc"
-#include "./../../../../GPUInstancer/Shaders/Include/GPUInstancerInclude.cginc"
+//#include "./../../../../GPUInstancer/Shaders/Include/GPUInstancerInclude.cginc"
 #pragma instancing_options procedural:setupGPUI
 #pragma multi_compile_instancing
 		#pragma vertex VertShader

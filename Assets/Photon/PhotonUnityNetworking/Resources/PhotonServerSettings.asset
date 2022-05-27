@@ -19,7 +19,7 @@ MonoBehaviour:
     AppVersion: 
     UseNameServer: 0
     FixedRegion: 
-    Server: 192.168.1.67
+    Server: 10.227.107.151
     Port: 5055
     Protocol: 0
     EnableLobbyStatistics: 0

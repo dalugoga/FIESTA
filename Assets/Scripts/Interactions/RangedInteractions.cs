@@ -202,6 +202,7 @@ public class RangedInteractions : VRTK_StraightPointerRenderer {
     {
         if (arg0.name == "MainScene")
         {
+            /* STOP Instantiation of SpinMenu
             // Instantiate spin menu
             GameObject spinMenu = PhotonNetwork.Instantiate("SpinMenu", Vector3.zero, Quaternion.identity, 0);
             spinMenu.GetComponent<SpinMenu>().SpinMenuToolChanged.AddListener(InteractionToolChanged);
@@ -210,7 +211,7 @@ public class RangedInteractions : VRTK_StraightPointerRenderer {
             spinMenu.transform.SetParent(VRTK_DeviceFinder.IsControllerLeftHand(gameObject) ? VRTK_DeviceFinder.GetControllerRightHand().transform.parent : VRTK_DeviceFinder.GetControllerLeftHand().transform.parent);
             spinMenu.transform.localPosition = Vector3.zero;
             spinMenu.transform.localRotation = Quaternion.identity;
-
+            */
             // Instantiate sprite renderer
             GameObject spriteRenderer =  PhotonNetwork.Instantiate("InteractionModeSprite", Vector3.zero, Quaternion.identity, 0);
             selectedInteractionRenderer = spriteRenderer.GetComponent<NetworkedSprite>();
