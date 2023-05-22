@@ -1,4 +1,4 @@
-﻿Suburb,Type,Price,Result,Seller,Date,Bedroom,Bathroom,Car,Landsize,YearBuilt,CouncilArea,Latitude,Longtitude,RegionName
+﻿Suburb,Type,Price,Result,Seller,Date,Bedroom,Bathroom,Car,Size,Year Built,Council Area,Latitude,Longtitude,Region Name
 Abbotsford,House,1035000,Sold,Biggin,4/02/2016,2,1,0,156,1900,Yarra City Council,-37.8079,144.9934,Northern Metropolitan
 Abbotsford,House,1876000,Sold,Nelson,7/05/2016,4,2,0,245,1910,Yarra City Council,-37.8024,144.9993,Northern Metropolitan
 Abbotsford,House,1012500,Sold,Nelson,28/05/2016,2,1,0,182,1900,Yarra City Council,-37.8021,144.9976,Northern Metropolitan

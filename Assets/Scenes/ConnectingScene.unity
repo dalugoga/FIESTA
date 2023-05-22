@@ -2582,6 +2582,7 @@ MonoBehaviour:
   autoLoadSetup: 1
   setups:
   - {fileID: 1644794559}
+  - {fileID: 2114685668}
   excludeTargetGroups: 1a0000001b000000
   persistOnLoad: 1
 --- !u!4 &648229940
@@ -3400,7 +3401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16161740863d599419d4e38b5bbe160a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 4900000, guid: cd8c152a99012cb458c938a8a2b1ece8, type: 3}
+  data: {fileID: 4900000, guid: 8754fcb7ae982944aa856ab1c27622b9, type: 3}
   metadata: {fileID: 0}
 --- !u!114 &933908395
 MonoBehaviour:

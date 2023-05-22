@@ -32,6 +32,7 @@ public class DataLogger : MonoBehaviourPunCallbacks {
     [SerializeField]
     public float timeBetweenLogs = 0.050f;
     [SerializeField]
+    //public string filePath = "C:/Users/DanielVR/Desktop";
     public string filePath = "Assets/Resources/Logs/";
     [SerializeField]
     public int groupID;
@@ -136,6 +137,7 @@ public class DataLogger : MonoBehaviourPunCallbacks {
 
         this.groupID = groupID;
         this.taskID = taskID;
+        long timestamp = System.DateTime.Now.Ticks;
 
         if (!filePath.EndsWith("\\"))
             filePath += "\\";
@@ -143,7 +145,7 @@ public class DataLogger : MonoBehaviourPunCallbacks {
         if (isMasterLogger)
         {
             // Objects
-            string path = string.Format("{0}Group{1}_Task{2}_ObjectData.txt", filePath, groupID, tasks[taskID].taskName);
+            string path = string.Format("{0}Group{1}_Task{2}_ObjectData_{3}.txt", filePath, groupID, tasks[taskID].taskName, timestamp);
             objectStreamWriter = new StreamWriter(path, true);
 
             // Write header for object data
@@ -158,7 +160,7 @@ public class DataLogger : MonoBehaviourPunCallbacks {
             erasers = FindObjectsOfType<EraserScript>().ToList();
 
             // Annotations
-            path = string.Format("{0}Group{1}_Task{2}_AnnotationData.txt", filePath, groupID, tasks[taskID].taskName);
+            path = string.Format("{0}Group{1}_Task{2}_AnnotationData_{3}.txt", filePath, groupID, tasks[taskID].taskName, timestamp);
             annotationsStreamWriter = new StreamWriter(path, true);
 
             // Write header for annotation data
@@ -167,7 +169,7 @@ public class DataLogger : MonoBehaviourPunCallbacks {
         }
         if (!isMasterLogger || (isMasterLogger && isLoggingPlayerData))
         {
-            string path = string.Format("{0}Group{1}_Task{2}_Participant{3}_PlayerData.txt", filePath, groupID, tasks[taskID].taskName, participantID);
+            string path = string.Format("{0}Group{1}_Task{2}_Participant{3}_PlayerData_{4}.txt", filePath, groupID, tasks[taskID].taskName, participantID, timestamp);
             playerStreamWriter = new StreamWriter(path, true);
 
             // Write header for player data
@@ -184,7 +186,7 @@ public class DataLogger : MonoBehaviourPunCallbacks {
                                          "LeftPointObject\tLeftPointObjectOriginalOwner\tLeftPointObjectOwner\tLeftPointObjectID\t" +
                                          "RightPointObject\tRightPointObjectOriginalOwner\tRightPointObjectOwner\tRightPointObjectID");
 
-            path = string.Format("{0}Group{1}_Task{2}_Participant{3}_ActionData.txt", filePath, groupID, tasks[taskID].taskName, participantID);
+            path = string.Format("{0}Group{1}_Task{2}_Participant{3}_ActionData_{4}.txt", filePath, groupID, tasks[taskID].taskName, participantID, timestamp);
             actionsStreamWriter = new StreamWriter(path, true);
 
             // Write header for action data
